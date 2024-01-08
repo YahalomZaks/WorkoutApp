@@ -12,7 +12,7 @@ body {
   font-family: "Poppins";
 }
 header {
-  background: #1aac83;
+  background: linear-gradient(45deg, #1aac83, transparent);
 }
 header .container {
   max-width: 1400px;
