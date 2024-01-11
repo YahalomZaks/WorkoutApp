@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import { workoutsRoutes } from "./routes/workouts.js";
+import { userRoutes } from "./routes/user.js";
 import mongoose from "mongoose";
 import cors from "cors";
 
@@ -13,6 +14,7 @@ app.use(
     origin: "*",
   })
 );
+app.use("/api/user", userRoutes);
 app.use("/api/workouts", workoutsRoutes);
 mongoose
   .connect(process.env.URI)
