@@ -2,7 +2,7 @@ import WorkoutModel from "../models/workoutModel.js";
 import mongoose from "mongoose";
 
 const getWorkouts = async (req, res) => {
-  const user_id = req.user._id;
+  const user_id = req.user?._id;
   const workouts = await WorkoutModel.find({ user_id }).sort({ createdAt: -1 });
   return res.status(200).json(workouts);
 };
