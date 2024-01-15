@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
-import User from "../models/userModel";
-const requireAuth = async (req, res, next) => {
+import User from "../models/userModel.js";
+
+export const requireAuth = async (req, res, next) => {
   // verification
   const { authorization } = req.headers;
 
